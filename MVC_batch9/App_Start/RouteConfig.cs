@@ -13,11 +13,30 @@ namespace MVC_batch9
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+
+            routes.MapMvcAttributeRoutes();
+
+
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
+              name: "Default1",
+              url: "Sweet/Gulabjamun",
+              defaults: new { controller = "Default", action = "getMeView", id = UrlParameter.Optional }
+          );
+
+
+            routes.MapRoute(
+              name: "Default2",
+              url: "Sweet/barfi",
+              defaults: new { controller = "Default", action = "getMeView", id = UrlParameter.Optional }
+          );
+
+            routes.MapRoute(
+               name: "Default",
+               url: "{controller}/{action}/{id}",
+               defaults: new { controller = "Employee", action = "Index", id = 1 }
+           );
+
+
         }
     }
 }
