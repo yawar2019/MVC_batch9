@@ -32,8 +32,8 @@ namespace MVC_batch9
 
             routes.MapRoute(
                name: "Default",
-               url: "{controller}/{action}/{id}",
-               defaults: new { controller = "Employee", action = "Index", id = 1 }
+               url: "{controller}/{action}/{id}/{name}",
+               defaults: new { controller = "Employee", action = "Index", id = UrlParameter.Optional, name = UrlParameter.Optional }
            );
 
 
