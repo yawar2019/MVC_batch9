@@ -5,6 +5,14 @@
 }
 <h2>SendDataforOneObject</h2>
 
-@Emp.EmpId
-@Emp.EmpName
-@Emp.EmpSalary
+@*@Emp.EmpId
+    @Emp.EmpName
+    @Emp.EmpSalary*@
+
+
+@foreach (var item in Emp)
+{
+    @item.EmpId<br/>
+    @item.EmpName<br />
+    @item.EmpSalary<br /><br />
+}

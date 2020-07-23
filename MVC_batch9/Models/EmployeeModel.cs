@@ -12,4 +12,10 @@ namespace MVC_batch9.Models
         public int EmpSalary { get; set; }
 
     }
+
+    public class empdept {
+        public EmployeeModel emp { get; set; }
+
+        public Department dept { get; set; }
+    }
 }

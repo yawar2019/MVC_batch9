@@ -10,9 +10,9 @@ namespace MVC_batch9.Controllers
     {
         // GET: Default
 
-        public string GetData(int? id,int name)
+        public string GetData(int? id, int name)
         {
-            return "hello World! for " + id + ","+name;//+Request.QueryString["name"];
+            return "hello World! for " + id + "," + name;//+Request.QueryString["name"];
         }
 
         public int getmeId()
@@ -20,7 +20,7 @@ namespace MVC_batch9.Controllers
 
             return 1211;
         }
-     
+
         public ActionResult getMeView()
         {
             return View();
@@ -45,7 +45,7 @@ namespace MVC_batch9.Controllers
 
         public ActionResult Index()
         {
-           
+
             return View();
         }
 
@@ -56,7 +56,8 @@ namespace MVC_batch9.Controllers
             return a + b;
         }
 
-        public ActionResult SendData() {
+        public ActionResult SendData()
+        {
             int a = 10;
 
             ViewBag.info = a;
@@ -68,16 +69,77 @@ namespace MVC_batch9.Controllers
 
         public ActionResult SendDataforOneObject()
         {
-            EmployeeModel em = new Models.EmployeeModel();
-            em.EmpId = 1;
-            em.EmpSalary = 820000;
-            em.EmpName = "JAck";
+            List<EmployeeModel> listobj = new List<EmployeeModel>();
 
-            ViewBag.Emp = em;
+            EmployeeModel emratan = new EmployeeModel();
+            emratan.EmpId = 1;
+            emratan.EmpSalary = 820000;
+            emratan.EmpName = "ratan";
 
-                return View();
+            EmployeeModel emkrishna = new EmployeeModel();
+            emkrishna.EmpId = 2;
+            emkrishna.EmpSalary = 920000;
+            emkrishna.EmpName = "krishna";
+
+            EmployeeModel emsuba = new EmployeeModel();
+            emsuba.EmpId = 3;
+            emsuba.EmpSalary = 720000;
+            emsuba.EmpName = "suba";
+
+            listobj.Add(emratan);
+            listobj.Add(emkrishna);
+            listobj.Add(emsuba);
+
+            ViewBag.Emp = listobj;
+
+            return View();
 
         }
 
+        public ActionResult SendDataByUsingModel()
+        {
+
+            EmployeeModel emratan = new EmployeeModel();
+            emratan.EmpId = 1;
+            emratan.EmpSalary = 820000;
+            emratan.EmpName = "ratan";
+
+            Department dept = new Models.Department();
+            dept.DeptId = 1;
+            dept.Deptname = "IT";
+
+
+            empdept obj = new empdept();
+            obj.emp = emratan;
+            obj.dept = dept;
+
+            return View(obj);
+        }
+        public ActionResult SendMultipleDataByUsingModel()
+        {
+
+            List<EmployeeModel> listobj = new List<EmployeeModel>();
+
+            EmployeeModel emratan = new EmployeeModel();
+            emratan.EmpId = 1;
+            emratan.EmpSalary = 820000;
+            emratan.EmpName = "ratan";
+
+            EmployeeModel emkrishna = new EmployeeModel();
+            emkrishna.EmpId = 2;
+            emkrishna.EmpSalary = 920000;
+            emkrishna.EmpName = "krishna";
+
+            EmployeeModel emsuba = new EmployeeModel();
+            emsuba.EmpId = 3;
+            emsuba.EmpSalary = 720000;
+            emsuba.EmpName = "suba";
+
+            listobj.Add(emratan);
+            listobj.Add(emkrishna);
+            listobj.Add(emsuba);
+
+            return View(listobj);
+        }
     }
 }

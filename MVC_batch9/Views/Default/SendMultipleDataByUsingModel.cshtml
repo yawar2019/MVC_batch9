@@ -1,0 +1,14 @@
+﻿@using MVC_batch9.Models
+@model List<EmployeeModel>
+@{
+    ViewBag.Title = "SendMultipleDataByUsingModel";
+}
+
+<h2>SendMultipleDataByUsingModel</h2>
+
+@foreach (var item in Model)
+{
+    @item.EmpId<br />
+    @item.EmpName<br />
+    @item.EmpSalary<br />
+}
