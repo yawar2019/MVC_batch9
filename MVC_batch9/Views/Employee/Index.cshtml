@@ -1,8 +1,13 @@
-﻿
+﻿@model MVC_batch9.Models.EmployeeModel
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
+ 
 
 Employee View is Called 
+
+@Html.Partial("_MyPartialView", Model)
+@{Html.RenderPartial("_MyPartialView", Model);}
+ 

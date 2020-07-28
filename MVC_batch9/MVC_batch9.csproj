@@ -163,6 +163,7 @@
     <Content Include="Views\Default\SendDataforOneObject.cshtml" />
     <Content Include="Views\Default\SendDataByUsingModel.cshtml" />
     <Content Include="Views\Default\SendMultipleDataByUsingModel.cshtml" />
+    <Content Include="Views\Shared\_MyPartialView.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

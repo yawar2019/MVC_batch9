@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVC_batch9.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,11 @@ namespace MVC_batch9.Controllers
         // GET: Employee
         public ActionResult Index()
         {
-            return View();
+            EmployeeModel obj = new EmployeeModel();
+            obj.EmpId = 1;
+            obj.EmpName = "Suba";
+            obj.EmpSalary = 34500;
+            return View(obj);
         }
     }
 }
