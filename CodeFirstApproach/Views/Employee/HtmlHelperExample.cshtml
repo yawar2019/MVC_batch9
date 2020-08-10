@@ -1,0 +1,34 @@
+﻿@model CodeFirstApproach.Models.EmployeeModel
+@{
+    ViewBag.Title = "HtmlHelperExample";
+}
+<script>
+    function fun()
+    {
+        alert("Hi Did you Called Me?");
+    }
+
+</script>
+
+<h2>HtmlHelperExample</h2>
+
+@Html.TextBox("Fname","Pavan",new { style = "background-color:Brown", @class="form-control", @onclick = "fun()" })
+@Html.TextBoxFor(x=>x.EmpName, new { @style = "background-color:Orange",@class="form-control", @onclick = "fun()" })
+<input type="text" id="Lname" name="Lname" value="john" style="background-color:skyblue;" class="form-control" onclick="fun()"/>
+<br />
+@*//List<int> obj=new list<int>();*@
+@Html.DropDownList("Country",new List<SelectListItem>() {
+    new SelectListItem {Text="India",Value="1" },
+    new SelectListItem {Text="China",Value="2",Selected=true },
+    new SelectListItem {Text="Bangladesh",Value="3" },
+},"Select Country")
+<br />
+@Html.DropDownList("Student")
+<br />
+@Html.DropDownList("Student",(IEnumerable<SelectListItem>)ViewBag.Student,"Select Student")
+<br />
+<select>
+    <option value="1">Hyderabad</option>
+    <option value="1">Secundrabad</option>
+    <option value="1">Golconda</option>
+</select>
