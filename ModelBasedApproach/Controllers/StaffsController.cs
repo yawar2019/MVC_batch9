@@ -81,6 +81,7 @@ namespace ModelBasedApproach.Controllers
         public ActionResult Edit([Bind(Include = "StaffId,Name,Designation")] Staff staff)
         {
             if (ModelState.IsValid)
+
             {
                 db.Entry(staff).State = EntityState.Modified;
                 db.SaveChanges();

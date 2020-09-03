@@ -1,0 +1,64 @@
+A class is said to be  partial class
+if that class is declared with keyword partial
+
+
+if you want to work on same class and as well as you want other people also should work on same class parallelly
+then you can use partial class.
+
+
+
+Sealed Class
+
+A class is said to be a sealed class
+if we declare with the keyword 
+sealed
+
+sealed class A
+{
+
+}
+
+
+sealed ?
+if i want to stop other classes to inherit my class then make you class
+as sealed class
+private methods can also be inherited in child class but we cannot access
+member because of protection level
+ 
+where as if we take sealed class
+we cannot inherit our parent class
+in child class
+
+
+
+Accessss Modifier
+
+5 access modifier
+
+it is used for giving accessablity
+to your class members
+
+private
+public
+protected
+internal
+protected internal
+
+
+private :
+if a variable is declare as private
+then that variable is accessible within the class only.
+
+Internal:
+if a variable is declare as Internal
+then that cariable is accessible within the same class and outside of the class of same assembly or
+same project
+
+
+Protected :
+if a variable is declare as protected then it behave as same way as private
+it cannot be accessible in other class
+if we create an object of that class.
+
+if i want to access then protected member can be accessible within the child class only with child class object.
+

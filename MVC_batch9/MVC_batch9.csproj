@@ -137,9 +137,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="CustomHelpers\UserHelperControl.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="HFilter\MyFilter.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -164,6 +166,8 @@
     <Content Include="Views\Default\SendDataByUsingModel.cshtml" />
     <Content Include="Views\Default\SendMultipleDataByUsingModel.cshtml" />
     <Content Include="Views\Shared\_MyPartialView.cshtml" />
+    <Content Include="Views\Default\getData.cshtml" />
+    <Content Include="Views\Default\getPlayer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

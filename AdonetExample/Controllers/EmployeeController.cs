@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using AdonetExample.Models;
+using AdonetExample.ServiceReference1;
 namespace AdonetExample.Controllers
 {
     public class EmployeeController : Controller
@@ -12,6 +13,10 @@ namespace AdonetExample.Controllers
         // GET: Employee
         public ActionResult Index()
         {
+            WebService1SoapClient obj = new WebService1SoapClient();
+            ViewBag.result = obj.Add(19, 20);
+            ServiceReference2.Service1Client obj1 = new ServiceReference2.Service1Client();
+            ViewBag.result2= obj1.Add(2, 8);
             return View(db.GetEmployee());
         }
         [HttpGet]

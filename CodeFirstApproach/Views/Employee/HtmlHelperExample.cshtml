@@ -1,4 +1,5 @@
-﻿@model CodeFirstApproach.Models.EmployeeModel
+﻿@using CodeFirstApproach.CustomHelpers 
+@model CodeFirstApproach.Models.EmployeeModel
 @{
     ViewBag.Title = "HtmlHelperExample";
 }
@@ -22,7 +23,7 @@
     new SelectListItem {Text="China",Value="2",Selected=true },
     new SelectListItem {Text="Bangladesh",Value="3" },
 },"Select Country")
-<br />
+<br />                                          
 @Html.DropDownList("Student")
 <br />
 @Html.DropDownList("Student",(IEnumerable<SelectListItem>)ViewBag.Student,"Select Student")
@@ -31,4 +32,35 @@
     <option value="1">Hyderabad</option>
     <option value="1">Secundrabad</option>
     <option value="1">Golconda</option>
-</select>
+</select><br />
+@Html.Password("pwd","MVC123")
+<br />
+@Html.RadioButton("Gender","Male",true)<span>Male</span>
+@Html.RadioButton("Gender", "FeMale")<span>FeMale</span>
+<br />
+@Html.CheckBox("Java")<span>Java</span>
+@Html.CheckBox("Dotnet",true)<span>Dotnet</span><br />
+@Html.TextArea("Address","Hyderabad",10,7,null)<br />
+
+@UserHelperControl.MyLabel("pratiusha")<br />
+ 
+@Html.createUrControl("text")<br />
+@Html.createUrControl("date")<br />
+@Html.createUrControl("file")<br />
+@Html.createUrControl("submit")<br />
+
+@helper labelbyrazzorcode(string content)
+{
+    <label>@content</label>
+}
+@labelbyrazzorcode("hi this is ali")
+
+
+
+@using (Html.BeginForm("Index", "Employee", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <span>File</span>
+    <input type="file" id="fileupload" name="fileupload" />
+    <input type="submit" value="upload" />
+}
+@ViewBag.msg

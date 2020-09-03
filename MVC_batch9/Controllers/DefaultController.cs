@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MVC_batch9.Models;
+using MVC_batch9.HFilter;
 namespace MVC_batch9.Controllers
 {
     public class DefaultController : Controller
@@ -210,5 +211,13 @@ namespace MVC_batch9.Controllers
 
             return Json(emsuba, JsonRequestBehavior.AllowGet);
         }
+
+        [MyFilter]
+        public ActionResult getPlayer() {
+            
+            ViewBag.Player = "MS Dhoni";
+            return View();
+        }
+
     }
 }

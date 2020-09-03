@@ -6,12 +6,23 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_batch9", "MVC_batch9\MVC_batch9.csproj", "{5E065708-6038-474D-9B51-E2D98BA1DCFF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdonetExample", "AdonetExample\AdonetExample.csproj", "{7D580BAE-3567-4C97-A700-7ECEBFB358DD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B0DB1493-09DA-4A53-972E-93802D1B4924} = {B0DB1493-09DA-4A53-972E-93802D1B4924}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBasedFirstApproach", "DataBasedFirstApproach\DataBasedFirstApproach.csproj", "{ECEAD6DE-01CB-4004-BCC6-FE48D5CCB289}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelBasedApproach", "ModelBasedApproach\ModelBasedApproach.csproj", "{19A3379D-807D-49C4-B5C8-89AECE6C7854}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstApproach", "CodeFirstApproach\CodeFirstApproach.csproj", "{919D8490-3B31-48A1-866D-789C7785464E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authentication", "Authentication\Authentication.csproj", "{FFCB6D0D-2DE7-45B0-8B09-C95D84A61BAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSeviceExample", "WebSeviceExample\WebSeviceExample.csproj", "{B0DB1493-09DA-4A53-972E-93802D1B4924}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{1BFC30B0-6F0F-4A19-9BF7-BA3F813925BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{5E69F389-6B05-4DE2-A41D-4C5DDDD7D4EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +50,22 @@ Global
 		{919D8490-3B31-48A1-866D-789C7785464E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{919D8490-3B31-48A1-866D-789C7785464E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{919D8490-3B31-48A1-866D-789C7785464E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFCB6D0D-2DE7-45B0-8B09-C95D84A61BAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFCB6D0D-2DE7-45B0-8B09-C95D84A61BAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFCB6D0D-2DE7-45B0-8B09-C95D84A61BAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFCB6D0D-2DE7-45B0-8B09-C95D84A61BAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0DB1493-09DA-4A53-972E-93802D1B4924}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0DB1493-09DA-4A53-972E-93802D1B4924}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0DB1493-09DA-4A53-972E-93802D1B4924}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0DB1493-09DA-4A53-972E-93802D1B4924}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BFC30B0-6F0F-4A19-9BF7-BA3F813925BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BFC30B0-6F0F-4A19-9BF7-BA3F813925BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BFC30B0-6F0F-4A19-9BF7-BA3F813925BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BFC30B0-6F0F-4A19-9BF7-BA3F813925BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E69F389-6B05-4DE2-A41D-4C5DDDD7D4EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E69F389-6B05-4DE2-A41D-4C5DDDD7D4EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E69F389-6B05-4DE2-A41D-4C5DDDD7D4EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E69F389-6B05-4DE2-A41D-4C5DDDD7D4EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
